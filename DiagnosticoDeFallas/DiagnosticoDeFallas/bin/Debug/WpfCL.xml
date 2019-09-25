@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfCL</name>
+    </assembly>
+    <members>
+        <member name="T:WpfCL.Buttons.HorizontalMenuButton">
+            <summary>
+            Interaction logic for HorizontalMenuButton.xaml
+            </summary>
+            <summary>
+            HorizontalMenuButton
+            </summary>
+        </member>
+        <member name="M:WpfCL.Buttons.HorizontalMenuButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfCL.Buttons.ImageButton">
+            <summary>
+            Interaction logic for ImageButton.xaml
+            </summary>
+            <summary>
+            ImageButton
+            </summary>
+        </member>
+        <member name="M:WpfCL.Buttons.ImageButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfCL.Buttons.ImageCheckBox">
+            <summary>
+            Interaction logic for ImageCheckBox.xaml
+            </summary>
+            <summary>
+            ImageCheckBox
+            </summary>
+        </member>
+        <member name="M:WpfCL.Buttons.ImageCheckBox.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WpfCL.Buttons.ImageCheckBox.CheckedImage">
+            <summary>
+            Recibe o devuelve la imagen que se muestra cuando Ischecked es verdadero.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Buttons.ImageCheckBox.UncheckedImage">
+            <summary>
+            Recibe o devuelve la imagen que se muestra cuando Ischecked es falso.
+            </summary>
+        </member>
+        <member name="T:WpfCL.Buttons.ImageTextButton">
+            <summary>
+            Interaction logic for ImageTextButton.xaml
+            </summary>
+            <summary>
+            ImageTextButton
+            </summary>
+        </member>
+        <member name="M:WpfCL.Buttons.ImageTextButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfCL.Buttons.UpDownNumericInput">
+            <summary>
+            Interaction logic for ValueModifierControl.xaml
+            </summary>
+            <summary>
+            UpDownNumericInput
+            </summary>
+        </member>
+        <member name="M:WpfCL.Buttons.UpDownNumericInput.NumericalValueChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar el valor
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfCL.Buttons.UpDownNumericInput.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfCL.Buttons.VerticalMenuButton">
+            <summary>
+            Interaction logic for VerticalMenuButton.xaml
+            </summary>
+            <summary>
+            VerticalMenuButton
+            </summary>
+        </member>
+        <member name="M:WpfCL.Buttons.VerticalMenuButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfCL.Menus.HorizontalImageMenu">
+            <summary>
+            Interaction logic for HorizontalImageMenu.xaml
+            </summary>
+            <summary>
+            HorizontalImageMenu
+            </summary>
+        </member>
+        <member name="M:WpfCL.Menus.HorizontalImageMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.HorizontalImageMenu.Image">
+            <summary>
+            Recibe o devuelve la dirección
+            de la imagen mostrada en el botón
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.HorizontalImageMenu.ContentInfo">
+            <summary>
+            Recibe o devuelve el texto que da
+            información sobre el contenido del menú.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.HorizontalImageMenu.Items">
+            <summary>
+            Recibe o devuelve el listado de nombres que
+            muestra el combobox
+            </summary>
+        </member>
+        <member name="T:WpfCL.Menus.ImageComboBox">
+            <summary>
+            Interaction logic for ImageComboBox_Image.xaml
+            </summary>
+            <summary>
+            ImageComboBox
+            </summary>
+        </member>
+        <member name="M:WpfCL.Menus.ImageComboBox.SelectionChange(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento correspondiente al cambio de selección del combobox.
+            Evita la ejecución del evento si no hay elemento seleccionado.
+            </summary>
+            <param name="sender">Objeto que activó el evento</param>
+            <param name="e">Información del evento</param>
+        </member>
+        <member name="M:WpfCL.Menus.ImageComboBox.ImageComboBox_Image_OnDropDownClosed(System.Object,System.EventArgs)">
+            <summary>
+            Evento correspondiente al cerrado del DropDown del combobox.
+            Deshace la selección del combobox.
+            </summary>
+            <param name="sender">Objeto que activó el evento</param>
+            <param name="e">Información del evento</param>
+        </member>
+        <member name="M:WpfCL.Menus.ImageComboBox.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageComboBox.Image">
+            <summary>
+            Recibe o devuelve la dirección
+            de la imagen mostrada en el botón
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageComboBox.Text">
+            <summary>
+            Recibe o devuelve la dirección
+            de la imagen mostrada en el botón
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageComboBox.ItemsPanelMaxWidth">
+            <summary>
+            Recibe o devuelve el ancho máximo del
+            panel que contiene los elementos.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageComboBox.ItemWidth">
+            <summary>
+            Recibe o devuelve el ancho de los elementos
+            que se muestran en el panel.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageComboBox.ItemHeight">
+            <summary>
+            Recibe o devuelve el alto de los elementos
+            que se muestran en el panel.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageComboBox.Command">
+            <summary>
+            Recibe o devuelve el comando que ocurre
+            cuando la imagen es presionada
+            </summary>
+        </member>
+        <member name="T:WpfCL.Menus.ImageContainerMenu">
+            <summary>
+            Interaction logic for ImageComboBox_Image.xaml
+            </summary>
+            <summary>
+            ImageContainerMenu
+            </summary>
+        </member>
+        <member name="M:WpfCL.Menus.ImageContainerMenu.SelectionChange(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Muestra en el botón la imagen que
+            es elegida en el combobox
+            </summary>
+            <param name="sender">Objeto que activó el evento</param>
+            <param name="e">Información del evento</param>
+        </member>
+        <member name="M:WpfCL.Menus.ImageContainerMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageContainerMenu.Selection">
+            <summary>
+            Devuelve la opción elegida en el combobox
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageContainerMenu.Items">
+            <summary>
+            Recibe o devuelve el listado de imágenes que
+            muestra el combobox
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageContainerMenu.Image">
+            <summary>
+            Recibe o devuelve la dirección
+            de la imagen mostrada en el botón
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageContainerMenu.ContentInfo">
+            <summary>
+            Recibe o devuelve el texto que da
+            información sobre el contenido del menú.
+            </summary>
+        </member>
+        <member name="E:WpfCL.Menus.ImageContainerMenu.Click">
+            <summary>
+            Evento del click. Ocurre cuando
+            la imagen es presionada
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageContainerMenu.Command">
+            <summary>
+            Recibe o devuelve el comando que ocurre
+            cuando la imagen es presionada
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.ImageContainerMenu.HighLightColor">
+            <summary>
+            Recibe o devuelve el color con que se ilumina
+            la imagen o el combobox al tener el mouse encima
+            </summary>
+        </member>
+        <member name="T:WpfCL.Menus.VerticalImageMenu">
+            <summary>
+            Interaction logic for ImageMenu.xaml
+            </summary>
+            <summary>
+            VerticalImageMenu
+            </summary>
+        </member>
+        <member name="M:WpfCL.Menus.VerticalImageMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalImageMenu.Image">
+            <summary>
+            Recibe o devuelve la dirección
+            de la imagen mostrada en el botón
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalImageMenu.ContentInfo">
+            <summary>
+            Recibe o devuelve el texto que da
+            información sobre el contenido del menú.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalImageMenu.Items">
+            <summary>
+            Recibe o devuelve el listado de nombres que
+            muestra el combobox
+            </summary>
+        </member>
+        <member name="T:WpfCL.Menus.VerticalMenuImageButton">
+            <summary>
+            Interaction logic for VerticalMenuImageButton.xaml
+            </summary>
+            <summary>
+            VerticalMenuImageButton
+            </summary>
+        </member>
+        <member name="M:WpfCL.Menus.VerticalMenuImageButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalMenuImageButton.Image">
+            <summary>
+            Recibe o devuelve la dirección
+            de la imagen mostrada en el botón
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalMenuImageButton.ContentInfo">
+            <summary>
+            Recibe o devuelve el texto que da
+            información sobre el contenido del menú.
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalMenuImageButton.Items">
+            <summary>
+            Recibe o devuelve el listado de nombres que
+            muestra el combobox
+            </summary>
+        </member>
+        <member name="P:WpfCL.Menus.VerticalMenuImageButton.ButtonHeight">
+            <summary>
+            Recibe o devuelve el alto del botón con imagen.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

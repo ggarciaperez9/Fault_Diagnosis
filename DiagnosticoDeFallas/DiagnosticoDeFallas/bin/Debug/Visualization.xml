@@ -1,0 +1,2875 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Visualization</name>
+    </assembly>
+    <members>
+        <member name="T:Visualization.Charts.TwoDimensions.Bar2DChart">
+            <summary>
+            Esboza el gráfico de barras 
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.InteractiveChart2D">
+            <summary>
+            Clase base de los graficos 2D
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.Chart">
+            <summary>
+            Clase base de los modelos de la vista de los gráficos
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.MouseWheel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.TempXmin">
+            <summary>
+            Valor temporal de la x mínima
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.TempXmax">
+            <summary>
+            Valor temporal de la x máxima
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.TempYmin">
+            <summary>
+            Valor temporal de la y mínima
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.TempYmax">
+            <summary>
+            Valor temporal de la y máxima
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.TempZmin">
+            <summary>
+            Valor temporal de la z mínima
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.TempZmax">
+            <summary>
+            Valor temporal de la z máxima
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.YmaxOficial">
+            <summary>
+            Límite máximo de las y sin porciento
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.YminOficial">
+            <summary>
+            Limite minimo de las y sin porciento
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.XmaxOficial">
+            <summary>
+            Limite maximo de las x sin porciento
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.XminOficial">
+            <summary>
+            Limite minimo de las x sin porciento
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.Chart.#ctor">
+            <summary>
+            Constructor de la clase base de los modelos de la vista de los gráficos
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.Chart.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="datay">Valores del eje y</param>       
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.Chart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.Chart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.Chart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables para el gráfico 3D a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="dataz">Valores del eje z</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.Chart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.Chart.OnMouseWheelProperty(System.Int32)">
+            <summary>
+            Clase complementaria de la herramienta del zoom con la rueda del mouse
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Visualization.Charts.Chart.TemporalDataList">
+            <summary>
+            Lista de variables temporales
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.OriginalDataList">
+            <summary>
+            Lista de variables originales
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.Xmin">
+            <summary>
+            Minimo valor de las x
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.Xmax">
+            <summary>
+            Maximo valor de las x
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.Ymin">
+            <summary>
+            Minimo valor de las y
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.Ymax">
+            <summary>
+            Maximo valor de las y
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.GridlinePattern">
+            <summary>
+            Enumerado q contiene todos los tipos de linea
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.GridlineColor">
+            <summary>
+            Color de las lineas del grid
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.IsYGrid">
+            <summary>
+            Habilita las lineas del eje y del grid
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.IsXGrid">
+            <summary>
+            Habilita las lineas del eje x del grid
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.IsXLimitDefault">
+            <summary>
+            Indica si se emplea por defecto los limites del eje x
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.IsDateTimeEnabled">
+            <summary>
+            Indica si se cargan fechas o valores en el tiempo
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.MinTimeSpan">
+            <summary>
+            Minima diferencia de tiempo entre las fechas 
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.XTick0">
+            <summary>
+            Ancho temporal de las x
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.YTick0">
+            <summary>
+            Ancho temporal de las y
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.ChartsTypes">
+            <summary>
+            Tipos de graficos
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.ChartCanvas">
+            <summary>
+            Canvas del gráfico
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.TextCanvas">
+            <summary>
+            Canvas que contiene los textos, ejes y el canvas del gráfico
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.Colormap">
+            <summary>
+            Mapa de colores
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Chart.Legend">
+            <summary>
+            Legenda
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.Chart.ChartsEnum">
+            <summary>
+            Enumerado de tipos de graficos
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Line2D">
+            <summary>
+            Gráfico de línea en 2D
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Scatter2D">
+            <summary>
+            Gráfico de punto en 2D
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Bar">
+            <summary>
+            Gráfico de barra
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Histogram">
+            <summary>
+            Gráfico de histograma
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Stairstep">
+            <summary>
+            Gráfico de paso escalera
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Stem">
+            <summary>
+            Gráfico de tallo
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Pie">
+            <summary>
+            Gráfico de pastel
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Line3D">
+            <summary>
+            Gráfico de línea en 3D
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.Scatter3D">
+            <summary>
+            Gráfico de puntos en 3D
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.ChartsEnum.BalancedPie">
+            <summary>
+            Gráfico de pastel para el balance de estados de opreación
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.Chart.GridlinePatternEnum">
+            <summary>
+            Enumerado de patrones de la línea
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.GridlinePatternEnum.Solid">
+            <summary>
+            Línea sólida (normal)
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.GridlinePatternEnum.Dash">
+            <summary>
+            Línea con guiones
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.GridlinePatternEnum.Dot">
+            <summary>
+            Línea con guiones más largos
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.Chart.GridlinePatternEnum.DashDot">
+            <summary>
+            Línea con guiones de varios largos
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.IsPropertiesChanged">
+            <summary>
+            Decide si se estan aplicando cambios a la propiedades 
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.IsRealTime">
+            <summary>
+            Marca la diferencia en entre los gráficos con fechas y los de tiempo real 
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.DifTime">
+            <summary>
+            Marca la diferencia en entre los gráficos con fechas y los de tiempo real 
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.Criterio">
+            <summary>
+            Cantidad de valores que debe mostrar una variable
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.ClickRight">
+            <summary>
+            Indica si se presiono el click derecho
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.Origins">
+            <summary>
+            Asigna  a los límites de los ejes de coordenadas sus valores originales
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.Limits">
+            <summary>
+            Calcula los límites de los ejes de coordenadas 
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="x">Valores del eje x</param>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables para el gráfico 3D a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="dataz">Valores del eje z</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.ReduceData(System.Windows.Shapes.Polyline,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Reduce la cantidad de puntos según el criterio
+            </summary>
+            <param name="temporalPolyline">Cantidad de puntos a reducir</param>
+            <param name="orden">Número correspondiente a la variable</param>
+            <param name="showdata">Booleano que decide si se reducen</param>
+            <param name="criterio">Valor a reducir la cantidad de puntos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.AddLinePattern">
+            <summary>
+            Asigna un patrón, un color y un grosor a la línea
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.AddChartStyle">
+            <summary>
+            Esboza el entorno del gráfico
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.PlotBackgroundwithDateTime">
+            <summary>
+            Grafica el entorno con fechas de un grafico
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.PlotBackgroundStandar">
+            <summary>
+            Grafica el entorno basico de un grafico
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.NormalizePoint(System.Windows.Point)">
+            <summary>
+            Normaliza un punto a la escala del canvas
+            </summary>
+            <param name="pt">Punto a normalizar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.DesnormalizePoint(System.Windows.Point)">
+            <summary>
+            Desnormaliza un punto que se encuentra en la escala del canvas
+            </summary>
+            <param name="pt">Punto normalizado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.OptimalSpacing(System.Double)">
+            <summary>
+            Calcula el espacio óptimo entre los valores en los ejes del gráfico
+            </summary>
+            <param name="original">Espacio real entre elementos del grafico</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.CloneListPolylines(System.Collections.Generic.List{System.Windows.Shapes.Polyline})">
+            <summary>
+            Clona una lista de líneas
+            </summary>
+            <param name="g"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.IntervalToPolyline(System.Collections.Generic.List{DataAnalysis.Basic.Interval{System.Double}},System.Collections.Generic.List{System.Windows.Shapes.Polyline})">
+            <summary>
+            Convierte una lista de intervalos en una lista de líneas
+            </summary>
+            <param name="listinterval">Lista de líneas que representan la cantidad de variables</param>
+            <param name="_listpoly"></param>
+            <returns>Lista de líneas de todas las variables juntas</returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.ClonePolygon(System.Windows.Shapes.Polygon)">
+            <summary>
+            Clona un polígono
+            </summary>
+            <param name="g">Polígono</param>
+            <returns>Clon del polígono</returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.IntervalHorizontalToPolygon(DataAnalysis.Basic.Interval{System.Double},System.Windows.Media.Brush)">
+            <summary>
+            Convierte un interval en un poligono
+            </summary>
+            <param name="interval">intervalo</param>
+            <param name="coloBrush">color del poligono</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.CalculateLimits(System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Calcula los nuevos limites del zooming 
+            </summary>
+            <param name="startPoint"></param>
+            <param name="endPoint"></param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart2D.Zooming(System.Double,System.Double,System.Double,System.Double,System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Valida los limites para el zooming
+            </summary>
+            <param name="tempxmin"></param>
+            <param name="tempxmax"></param>
+            <param name="tempymin"></param>
+            <param name="tempymax"></param>
+            <param name="startPoint"></param>
+            <param name="endPoint"></param>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.XmaxCustom">
+            <summary>
+            Valor minimo de x establecido por el usuario
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.XminCustom">
+            <summary>
+            Valor maximo de x establecido por el usuario
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.IsTextBlock">
+            <summary>
+            Booleano empleado por los graficos simples para no mostrar los ejes coordenados
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.IsAutomaticXTickEnabled">
+            <summary>
+            Habilitacion de los tick de los textos del eje x
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.OriginalDataListReduce">
+            <summary>
+            Lista de polyline que contienen el set de datos reducidos pero no normalizados para cada una de las variables 
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.RazonList">
+            <summary>
+            Lista de elementos que representan la diferencia real entre punto y punto que se emplea para la 
+            herramienta de modificar intervalos
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.Listpoly">
+            <summary>
+            Lista de polyline que contienen el set de datos reducidos para cada una de las variables 
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.razon">
+            <summary>
+            Lista de elementos que representan la diferencia real entre punto y punto cuando se reducen los datos 
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.DateTimeToShow">
+            <summary>
+            Tipo de margen de tiempo
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.NormalizedListRect">
+            <summary>
+            Lista de poligonos normalizados
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.InteractiveChart2D.GToolsChart">
+            <summary>
+            Tipos de herramientas graficas
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.InteractiveChart2D.Time">
+            <summary>
+            Enumerado de tipo de margenes de tiempo
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.Time.Año">
+            <summary>
+            Representa q existe una diferencia de un año
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.Time.Mes">
+            <summary>
+            Representa q existe una diferencia de un mes
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.Time.Dia">
+            <summary>
+            Representa q existe una diferencia de un dia
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.InteractiveChart2D.Time.Hora">
+            <summary>
+            Representa q existe una diferencia de una hora
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Bar2DChart.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="data">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Bar2DChart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Bar2DChart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Bar2DChart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.TwoDimensions.Histogram2DChart">
+            <summary>
+            Esboza el histograma en dos dimensiones
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Histogram2DChart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Histogram2DChart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.TwoDimensions.Line2DChart">
+            <summary>
+            Esboza el gráfico de línea en dos dimensiones
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.TwoDimensions.Line2DChart.NormalizedSelectPoints">
+            <summary>
+            Contiene la lista de lineas normalizadas al canvas que representan a los intervalos seleccionados
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.TwoDimensions.Line2DChart.DiList">
+            <summary>
+            Lista de intervalos verticales dibujables
+            </summary>
+        </member>
+        <member name="F:Visualization.Charts.TwoDimensions.Line2DChart.PositionType">
+            <summary>
+            Lista de intervalos horizontales dibujables
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Carga los datos del gráfico de línea en el tiempo 
+            </summary>
+            <param name="y">Conjunto de valores de la variable</param>
+            <param name="properties">Propiedades de la variable a graficar</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Carga los datos del gráfico de línea
+            </summary>
+            <param name="x">Valores del eje x de la variable</param>
+            <param name="y">Valores del eje y de la variable</param>
+            <param name="properties">Propiedades de la variable a graficar</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.Plot">
+            <summary>
+            Grafica las variables
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.SelectingVertical(System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Comprueba que el rango seleccionado de forma vertical no haya sido seleccionado anteriormente y 
+            lo guarda en una lista de intervalos
+            </summary>
+            <param name="startPoint"> Punto inicial de la selección</param>
+            <param name="endPoint">Punto final de la selección</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.UpdateHighlightedIntervals(Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Actualiza la lista de DrawableIntervals con los elementos de la lista de HighlightedVerticalIntervals
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.UpdateSelectedHighlightedInterval(Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Actualiza la lista de DrawableIntervals con el intervalo SelectHighlightVerticalInterval
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.UpdateAllIntervals(Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Actualiza la lista de DrawableIntervals con los elementos de la lista de AllVerticalIntervals
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.ChangeTypeInterval(Visualization.Entities.Intervals.DrawableInterval)">
+            <summary>
+            Cambia el tipo de intervalo vertical
+            </summary>
+            <param name="di">Intervalo dibujable</param>  
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.CloneRectangleOfDrawableIntervalList(System.Collections.Generic.List{Visualization.Entities.Intervals.DrawableInterval})">
+            <summary>
+            Crea un clon de rectángulos de la lista de DrawableIntervals 
+            </summary>
+            <param name="list">Lista de intervalos dibujables</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.CloneRectangleOfIntervalHorizontalsList(System.Collections.Generic.List{System.Windows.Shapes.Polygon})">
+            <summary>
+            Crea un clon de rectángulos de la lista de intervalos horizontales 
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Line2DChart.ListIntervalsToListPolygon(System.Collections.Generic.List{DataAnalysis.Basic.Interval{System.Double}})">
+            <summary>
+            Convierte una lista de intervalos en lista de rectángulos
+            </summary>
+            <param name="list">Lista de intervalos</param>
+            <returns></returns>
+        </member>
+        <member name="T:Visualization.Charts.TwoDimensions.Scatter2DChart">
+            <summary>
+            Esboza el gráfico de puntos en dos dimensiones
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Scatter2DChart.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Scatter2DChart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="x">Valores del eje x</param>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Scatter2DChart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            /// <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Scatter2DChart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stairstep2DChart.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stairstep2DChart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="x">Valores del eje x</param>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stairstep2DChart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            /// <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stairstep2DChart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="T:Visualization.Charts.TwoDimensions.Stem2DChart">
+            <summary>
+            Esboza el gráfico de tallo en dos dimensiones
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stem2DChart.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stem2DChart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="x">Valores del eje x</param>
+            <param name="y">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stem2DChart.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            /// <param name="type">Tipo de relleno para las valores restantes</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.TwoDimensions.Stem2DChart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.AddData(DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación con los valores del eje x por defecto
+            </summary>
+            <param name="datay">Valores del eje y</param>
+            <param name="xTextValues">Valores del tipo texto para el eje de las x</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.AddData(System.Collections.Generic.List{System.DateTime},DataAnalysis.Basic.RVector,Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum,Visualization.Data.Properties.PropertiesChart)">
+            <summary> 
+            Adiciona variables a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x en fechas</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables para el gráfico 3D a la aplicación 
+            </summary>
+            <param name="datax">Valores del eje x</param>
+            <param name="datay">Valores del eje y</param>
+            <param name="dataz">Valores del eje z</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.AddTicks">
+            <summary>
+            Representa las marcas de los ejes en  el gráfico
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.InteractiveChart3D.TicTac">
+            <summary>
+            Calcula la distancia entre los valores de los tres ejes  
+            </summary>
+        </member>
+        <member name="M:Visualization.Charts.ThreeDimensions.Line3DChart.AddData(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.PropertiesChart)">
+            <summary>
+            Adiciona variables para el gráfico 3D a la aplicación 
+            </summary>
+            <param name="x">Valores del eje x</param>
+            <param name="y">Valores del eje y</param>
+            <param name="z">Valores del eje z</param>
+            <param name="properties">Propiedades de la variable</param>
+        </member>
+        <member name="M:Visualization.Charts.ThreeDimensions.Line3DChart.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Pies.Pie.Legend">
+            <summary>
+            Legenda
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Pies.Pie.ChartCanvas">
+            <summary>
+            Canvas del gráfico
+            </summary>
+        </member>
+        <member name="P:Visualization.Charts.Pies.Pie.Colormap">
+            <summary>
+            Mapa de colores
+            </summary>
+        </member>
+        <member name="T:Visualization.Data.DataSeriesInteractive">
+            <summary>
+            Datos de un grafico interactivo
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.DataSeries.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Data.DataSeriesInteractive.#ctor(DataAnalysis.Basic.RVector,Visualization.Data.Properties.InteractiveProperties)">
+            <summary>
+            Constructor para solamente el eje de las y
+            </summary>
+            <param name="y"></param>
+            <param name="propertiesChart"></param>
+        </member>
+        <member name="M:Visualization.Data.DataSeriesInteractive.#ctor(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.InteractiveProperties)">
+            <summary>
+            Constructor para valores de ambos ejes de coordenadas
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="propertiesChart"></param>
+        </member>
+        <member name="M:Visualization.Data.DataSeriesInteractive.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.DataSeriesInteractive.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Data.DataSeriesInteractive.CalculateDateTimeValues(Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum)">
+            <summary>
+            Completa el set de valores de acuerdo al tipo de relleno 
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="P:Visualization.Data.DataSeriesInteractive.MinDiferent">
+            <summary>
+            Minima diferencia entre los valores de 
+            </summary>
+        </member>
+        <member name="P:Visualization.Data.DataSeriesInteractive.TypeFilling">
+            <summary>
+            Tipo de relleno para los valores faltantes
+            </summary>
+        </member>
+        <member name="T:Visualization.Data.TwoDimensions.DataSeries2D">
+            <summary>
+            Datos de un grafico 2D
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeries2D.#ctor(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.Properties2D.Properties2D)">
+            <summary>
+            Constructor para valores de ambos ejes de coordenadas
+            </summary>
+            <param name="y"></param>
+            /// <param name="x"></param>
+            <param name="propertiesChart"></param>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeries2D.#ctor(DataAnalysis.Basic.RVector,Visualization.Data.Properties.Properties2D.Properties2D)">
+            <summary>
+            Constructor para solamente el eje de las y
+            </summary>
+            <param name="y"></param>
+            /// <param name="x"></param>
+            <param name="propertiesChart"></param>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeries2D.#ctor">
+            <summary>
+            Contructor de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeries2D.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Visualization.Data.TwoDimensions.DataSeries2D.Properties">
+            <summary>
+            Propiedades del grafico 2D
+            </summary>
+        </member>
+        <member name="T:Visualization.Data.TwoDimensions.DataSeriesBar">
+            <summary>
+            Datos del grafico de barras
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesHistograma.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesBar.#ctor(DataAnalysis.Basic.RVector,DataAnalysis.Basic.RVector,Visualization.Data.Properties.Properties2D.BarProperties)">
+            <summary>
+            Constructor para valores de ambos ejes de coordenadas
+            </summary>
+            <param name="y"></param>
+            /// <param name="x"></param>
+            <param name="propertiesChart"></param>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesBar.#ctor(DataAnalysis.Basic.RVector,Visualization.Data.Properties.Properties2D.BarProperties)">
+            <summary>
+            Constructor para solamente el eje de las y
+            </summary>
+            <param name="y"></param>
+            /// <param name="x"></param>
+            <param name="propertiesChart"></param>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesBar.#ctor">
+            <summary>
+            Contructor de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesBar.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Visualization.Data.TwoDimensions.DataSeriesBar.Properties">
+            <summary>
+            Propiedades del grafico de barras
+            </summary>
+        </member>
+        <member name="T:Visualization.Data.TwoDimensions.DataSeriesScatter">
+            <summary>
+            Datos del grafico de punto
+            </summary>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesScatter.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Data.TwoDimensions.DataSeriesLine.Clone">
+            <summary>
+            Genera un clon de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Visualization.Entities.Components.Coordinates">
+            <summary>
+            Interaction logic for Coordinates.xaml
+            </summary>
+            <summary>
+            Coordinates
+            </summary>
+        </member>
+        <member name="M:Visualization.Entities.Components.Coordinates.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Visualization.Entities.Intervals.DrawableInterval">
+            <summary>
+            Intervalo dibujable
+            </summary>
+        </member>
+        <member name="F:Visualization.Entities.Intervals.DrawableInterval.IntervalPositionType">
+            <summary>
+            Tipos de intervalos
+            </summary>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableInterval.#ctor">
+            <summary>
+            Inicializa las propiedades de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableInterval.#ctor(DataAnalysis.Basic.Interval{System.Double},System.Double,System.Double,Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType,Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Inicializa las propiedades del intervalo y el rectángulo
+            </summary>
+            <param name="interval"></param>
+            <param name="chartCanvasHeight"></param>
+            <param name="chartCanvasWight"></param>
+            <param name="intervalType"></param>
+            <param name="intervalPositionType"></param>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableInterval.Equals(Visualization.Entities.Intervals.DrawableInterval)">
+            <summary>
+            Establece la igualdad entre dos intervalos dibujables comparando solo el intervalo
+            </summary>
+            <param name="di"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableInterval.op_Equality(Visualization.Entities.Intervals.DrawableInterval,Visualization.Entities.Intervals.DrawableInterval)">
+            <summary>
+            Determina la igualdad entre dos intervalos dibujables 
+            </summary>
+            <param name="di1">Intervalo dibujable</param>
+            <param name="di2">Intervalo dibujable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableInterval.op_Inequality(Visualization.Entities.Intervals.DrawableInterval,Visualization.Entities.Intervals.DrawableInterval)">
+            <summary>
+            Determina la desigualdad entre dos intervalos dibujables 
+            </summary>
+            <param name="di1">Intervalo dibujable</param>
+            <param name="di2">Intervalo dibujable</param>
+            <returns></returns>
+        </member>
+        <member name="P:Visualization.Entities.Intervals.DrawableInterval.Interval">
+            <summary>
+            Intervalo
+            </summary>
+        </member>
+        <member name="P:Visualization.Entities.Intervals.DrawableInterval.IntervalType">
+            <summary>
+             Tipo de intervalos
+            </summary>
+        </member>
+        <member name="P:Visualization.Entities.Intervals.DrawableInterval.Rectangle">
+            <summary>
+            Rectangulo que representa el intervalo en el grafico
+            </summary>
+        </member>
+        <member name="T:Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType">
+            <summary>
+            Enumerado de tipo de intervalos
+            </summary>
+        </member>
+        <member name="F:Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType.Standard">
+            <summary>
+            Intervalo estandar
+            </summary>
+        </member>
+        <member name="F:Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType.Highlighted">
+            <summary>
+            Intervalo correspondiente al estado de operacion seleccionado
+            </summary>
+        </member>
+        <member name="F:Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType.SelectedHighlighted">
+            <summary>
+            Intervalo seleccionado del los intervalos de un estado de operacion
+            </summary>
+        </member>
+        <member name="T:Visualization.Entities.Intervals.DrawableIntervalList">
+            <summary>
+            Modela una lista de intervalos dibujables
+            </summary>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.DeleteDrawableInterval(Visualization.Entities.Intervals.DrawableInterval)">
+            <summary>
+            Elimina un elemento de la lista de intervalos 
+            </summary>
+            <param name="di">Elemento a eliminar</param>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.AddInterval(DataAnalysis.Basic.Interval{System.Double},System.Double,Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType,System.Double,Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Añade un elemento a la lista
+            </summary>
+            <param name="interval">Intervalo</param>
+            <param name="rectangleHeight"></param>
+            <param name="type"></param>
+            <param name="chartCanvasWight"></param>
+            <param name="intervalPositionType"></param>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.AddListInterval(System.Collections.Generic.List{DataAnalysis.Basic.Interval{System.Double}},System.Double,Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType,System.Double,Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Añade una lista de elementos 
+            </summary> 
+            <param name="intervalList"></param>
+            <param name="rectangleHeight"></param>
+            <param name="type"></param>
+            <param name="chartCanvasWight"></param>
+            <param name="intervalPositionType"></param>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.SearchAndAddInterval(DataAnalysis.Basic.Interval{System.Double},System.Double,Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType,System.Double,Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Agrega a la lista un intervalo tipo determinado
+            </summary>
+            <param name="interval"></param>
+            <param name="rectangleHeight"></param>
+            <param name="type"></param>
+            <param name="chartCanvasWight"></param>
+            <param name="intervalPositionType"></param>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.AddListIntervalType(System.Collections.Generic.List{DataAnalysis.Basic.Interval{System.Double}},System.Double,Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType,System.Double,Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum)">
+            <summary>
+            Busca y cambia de tipo los elementos de lista
+            </summary>
+            <param name="listInterval"></param>
+            <param name="rectangleHeight"></param>
+            <param name="type"></param>
+            <param name="chartCanvasWight"></param>
+            <param name="intervalPositionType"></param>
+            <returns>Una lista de elementos a cambiar</returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.IntervalsExist(DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Comprueba la existencia de un intervalo dentro de la lista 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.ModifyIntervals(DataAnalysis.Basic.Interval{System.Double},DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Modifica un intervalo dentro de la lista 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.ModifyHorizontalIntervals(DataAnalysis.Basic.Interval{System.Double},DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Modifica un intervalo dentro de la lista 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.IntervalsTypeExist(Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType)">
+            <summary>
+            Comprueba la existencia de un tipo de intervalo dentro de la lista 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.UploadDrawableIntervalType(Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType)">
+            <summary>
+            Devuelve los intervalos de un tipo pertenecientes a la lista
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.UploadSelectedHighlightedType">
+            <summary>
+            Devuelve el intervalo de tipo selectedhighlighted de la lista
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.RemoveIntervalType(Visualization.Entities.Intervals.DrawableInterval.DrawableIntervalType)">
+            <summary>
+            Elimina los intervalos del mismo tipo de la lista
+            </summary>
+            <param name="type">Tipo de intervalo</param>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.CrearList">
+            <summary>
+            Limpia la lista de intervalos
+            </summary>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.IsEmptyList">
+            <summary>
+            Comprueba si la lista está vacía
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.UploadDrawableIntervalPrevious(DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Devuelve el intervalo vertical anterior o nulo si no existe
+            </summary>
+            <param name="interval"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.Entities.Intervals.DrawableIntervalList.UploadDrawableIntervalPosterior(DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Devuelve el intervalo vertical siguiente o nulo si no existe
+            </summary>
+            <param name="interval"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Visualization.Entities.Intervals.DrawableIntervalList.DrawableIntervals">
+            <summary>
+            Lista de intervalos dibujables
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.CanBeNullAttribute">
+            <summary>
+            Indicates that the value of the marked element could be <c>null</c> sometimes,
+            so the check for <c>null</c> is necessary before its usage
+            </summary>
+            <example><code>
+            [CanBeNull] public object Test() { return null; }
+            public void UseTest() {
+              var p = Test();
+              var s = p.ToString(); // Warning: Possible 'System.NullReferenceException'
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.NotNullAttribute">
+            <summary>
+            Indicates that the value of the marked element could never be <c>null</c>
+            </summary>
+            <example><code>
+            [NotNull] public object Foo() {
+              return null; // Warning: Possible 'null' assignment
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.StringFormatMethodAttribute">
+            <summary>
+            Indicates that the marked method builds string by format pattern and (optional) arguments.
+            Parameter, which contains format string, should be given in constructor. The format string
+            should be in <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object[])"/>-like form
+            </summary>
+            <example><code>
+            [StringFormatMethod("message")]
+            public void ShowError(string message, params object[] args) { /* do something */ }
+            public void Foo() {
+              ShowError("Failed: {0}"); // Warning: Non-existing argument in format string
+            }
+            </code></example>
+        </member>
+        <member name="M:Visualization.Properties.StringFormatMethodAttribute.#ctor(System.String)">
+            <param name="formatParameterName">
+            Specifies which parameter of an annotated method should be treated as format-string
+            </param>
+        </member>
+        <member name="T:Visualization.Properties.InvokerParameterNameAttribute">
+            <summary>
+            Indicates that the function argument should be string literal and match one
+            of the parameters of the caller function. For example, ReSharper annotates
+            the parameter of <see cref="T:System.ArgumentNullException"/>
+            </summary>
+            <example><code>
+            public void Foo(string param) {
+              if (param == null)
+                throw new ArgumentNullException("par"); // Warning: Cannot resolve symbol
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.NotifyPropertyChangedInvocatorAttribute">
+             <summary>
+             Indicates that the method is contained in a type that implements
+             <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> interface
+             and this method is used to notify that some property value changed
+             </summary>
+             <remarks>
+             The method should be non-static and conform to one of the supported signatures:
+             <list>
+             <item><c>NotifyChanged(string)</c></item>
+             <item><c>NotifyChanged(params string[])</c></item>
+             <item><c>NotifyChanged{T}(Expression{Func{T}})</c></item>
+             <item><c>NotifyChanged{T,U}(Expression{Func{T,U}})</c></item>
+             <item><c>SetProperty{T}(ref T, T, string)</c></item>
+             </list>
+             </remarks>
+             <example><code>
+             public class Foo : INotifyPropertyChanged {
+               public event PropertyChangedEventHandler PropertyChanged;
+               [NotifyPropertyChangedInvocator]
+               protected virtual void NotifyChanged(string propertyName) { ... }
+            
+               private string _name;
+               public string Name {
+                 get { return _name; }
+                 set { _name = value; NotifyChanged("LastName"); /* Warning */ }
+               }
+             }
+             </code>
+             Examples of generated notifications:
+             <list>
+             <item><c>NotifyChanged("Property")</c></item>
+             <item><c>NotifyChanged(() =&gt; Property)</c></item>
+             <item><c>NotifyChanged((VM x) =&gt; x.Property)</c></item>
+             <item><c>SetProperty(ref myField, value, "Property")</c></item>
+             </list>
+             </example>
+        </member>
+        <member name="T:Visualization.Properties.ContractAnnotationAttribute">
+            <summary>
+            Describes dependency between method input and output
+            </summary>
+            <syntax>
+            <p>Function Definition Table syntax:</p>
+            <list>
+            <item>FDT      ::= FDTRow [;FDTRow]*</item>
+            <item>FDTRow   ::= Input =&gt; Output | Output &lt;= Input</item>
+            <item>Input    ::= ParameterName: Value [, Input]*</item>
+            <item>Output   ::= [ParameterName: Value]* {halt|stop|void|nothing|Value}</item>
+            <item>Value    ::= true | false | null | notnull | canbenull</item>
+            </list>
+            If method has single input parameter, it's name could be omitted.<br/>
+            Using <c>halt</c> (or <c>void</c>/<c>nothing</c>, which is the same)
+            for method output means that the methos doesn't return normally.<br/>
+            <c>canbenull</c> annotation is only applicable for output parameters.<br/>
+            You can use multiple <c>[ContractAnnotation]</c> for each FDT row,
+            or use single attribute with rows separated by semicolon.<br/>
+            </syntax>
+            <examples><list>
+            <item><code>
+            [ContractAnnotation("=> halt")]
+            public void TerminationMethod()
+            </code></item>
+            <item><code>
+            [ContractAnnotation("halt &lt;= condition: false")]
+            public void Assert(bool condition, string text) // regular assertion method
+            </code></item>
+            <item><code>
+            [ContractAnnotation("s:null => true")]
+            public bool IsNullOrEmpty(string s) // string.IsNullOrEmpty()
+            </code></item>
+            <item><code>
+            // A method that returns null if the parameter is null, and not null if the parameter is not null
+            [ContractAnnotation("null => null; notnull => notnull")]
+            public object Transform(object data) 
+            </code></item>
+            <item><code>
+            [ContractAnnotation("s:null=>false; =>true,result:notnull; =>false, result:null")]
+            public bool TryParse(string s, out Person result)
+            </code></item>
+            </list></examples>
+        </member>
+        <member name="T:Visualization.Properties.LocalizationRequiredAttribute">
+            <summary>
+            Indicates that marked element should be localized or not
+            </summary>
+            <example><code>
+            [LocalizationRequiredAttribute(true)]
+            public class Foo {
+              private string str = "my string"; // Warning: Localizable string
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.CannotApplyEqualityOperatorAttribute">
+            <summary>
+            Indicates that the value of the marked type (or its derivatives)
+            cannot be compared using '==' or '!=' operators and <c>Equals()</c>
+            should be used instead. However, using '==' or '!=' for comparison
+            with <c>null</c> is always permitted.
+            </summary>
+            <example><code>
+            [CannotApplyEqualityOperator]
+            class NoEquality { }
+            class UsesNoEquality {
+              public void Test() {
+                var ca1 = new NoEquality();
+                var ca2 = new NoEquality();
+                if (ca1 != null) { // OK
+                  bool condition = ca1 == ca2; // Warning
+                }
+              }
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.BaseTypeRequiredAttribute">
+            <summary>
+            When applied to a target attribute, specifies a requirement for any type marked
+            with the target attribute to implement or inherit specific type or types.
+            </summary>
+            <example><code>
+            [BaseTypeRequired(typeof(IComponent)] // Specify requirement
+            public class ComponentAttribute : Attribute { }
+            [Component] // ComponentAttribute requires implementing IComponent interface
+            public class MyComponent : IComponent { }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.UsedImplicitlyAttribute">
+            <summary>
+            Indicates that the marked symbol is used implicitly
+            (e.g. via reflection, in external library), so this symbol
+            will not be marked as unused (as well as by other usage inspections)
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.MeansImplicitUseAttribute">
+            <summary>
+            Should be used on attributes and causes ReSharper
+            to not mark symbols marked with such attributes as unused
+            (as well as by other usage inspections)
+            </summary>
+        </member>
+        <member name="F:Visualization.Properties.ImplicitUseKindFlags.Access">
+            <summary>Only entity marked with attribute considered used</summary>
+        </member>
+        <member name="F:Visualization.Properties.ImplicitUseKindFlags.Assign">
+            <summary>Indicates implicit assignment to a member</summary>
+        </member>
+        <member name="F:Visualization.Properties.ImplicitUseKindFlags.InstantiatedWithFixedConstructorSignature">
+            <summary>
+            Indicates implicit instantiation of a type with fixed constructor signature.
+            That means any unused constructor parameters won't be reported as such.
+            </summary>
+        </member>
+        <member name="F:Visualization.Properties.ImplicitUseKindFlags.InstantiatedNoFixedConstructorSignature">
+            <summary>Indicates implicit instantiation of a type</summary>
+        </member>
+        <member name="T:Visualization.Properties.ImplicitUseTargetFlags">
+            <summary>
+            Specify what is considered used implicitly
+            when marked with <see cref="T:Visualization.Properties.MeansImplicitUseAttribute"/>
+            or <see cref="T:Visualization.Properties.UsedImplicitlyAttribute"/>
+            </summary>
+        </member>
+        <member name="F:Visualization.Properties.ImplicitUseTargetFlags.Members">
+            <summary>Members of entity marked with attribute are considered used</summary>
+        </member>
+        <member name="F:Visualization.Properties.ImplicitUseTargetFlags.WithMembers">
+            <summary>Entity marked with attribute and all its members considered used</summary>
+        </member>
+        <member name="T:Visualization.Properties.PublicAPIAttribute">
+            <summary>
+            This attribute is intended to mark publicly available API
+            which should not be removed and so is treated as used
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.InstantHandleAttribute">
+            <summary>
+            Tells code analysis engine if the parameter is completely handled
+            when the invoked method is on stack. If the parameter is a delegate,
+            indicates that delegate is executed while the method is executed.
+            If the parameter is an enumerable, indicates that it is enumerated
+            while the method is executed
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.PureAttribute">
+            <summary>
+            Indicates that a method does not make any observable state changes.
+            The same as <c>System.Diagnostics.Contracts.PureAttribute</c>
+            </summary>
+            <example><code>
+            [Pure] private int Multiply(int x, int y) { return x * y; }
+            public void Foo() {
+              const int a = 2, b = 2;
+              Multiply(a, b); // Waring: Return value of pure method is not used
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.PathReferenceAttribute">
+            <summary>
+            Indicates that a parameter is a path to a file or a folder
+            within a web project. Path can be relative or absolute,
+            starting from web root (~)
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcActionAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC action. If applied to a method, the MVC action name is calculated
+            implicitly from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcAreaAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC area.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcControllerAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that
+            the parameter is an MVC controller. If applied to a method,
+            the MVC controller name is calculated implicitly from the context.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcMasterAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC Master.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Controller.View(String, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcModelTypeAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC model type.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Controller.View(String, Object)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcPartialViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that
+            the parameter is an MVC partial view. If applied to a method,
+            the MVC partial view name is calculated implicitly from the context.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcSupressViewErrorAttribute">
+            <summary>
+            ASP.NET MVC attribute. Allows disabling all inspections
+            for MVC views within a class or a method.
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcDisplayTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC display template.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.Mvc.Html.DisplayExtensions.DisplayForModel(HtmlHelper, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcEditorTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC editor template.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.EditorExtensions.EditorForModel(HtmlHelper, String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC template.
+            Use this attribute for custom wrappers similar to
+            <c>System.ComponentModel.DataAnnotations.UIHintAttribute(System.String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view. If applied to a method, the MVC view name is calculated implicitly
+            from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Controller.View(Object)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.Properties.AspMvcActionSelectorAttribute">
+            <summary>
+            ASP.NET MVC attribute. When applied to a parameter of an attribute,
+            indicates that this parameter is an MVC action name
+            </summary>
+            <example><code>
+            [ActionName("Foo")]
+            public ActionResult Login(string returnUrl) {
+              ViewBag.ReturnUrl = Url.Action("Foo"); // OK
+              return RedirectToAction("Bar"); // Error: Cannot resolve action
+            }
+            </code></example>
+        </member>
+        <member name="T:Visualization.Properties.RazorSectionAttribute">
+            <summary>
+            Razor attribute. Indicates that a parameter or a method is a Razor section.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.WebPages.WebPageBase.RenderSection(String)</c>
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl">
+            <summary>
+            Gráfico en el tiempo real
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl">
+            <summary>
+            Gráfico dinámico
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.ChartView">
+            <summary>
+            Interaction logic for ChartView.xaml
+            </summary>
+            <summary>
+            ChartView
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView._chart">
+            <summary>
+            Gráfico base
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.StartPoint">
+            <summary>
+            Punto de inicio de las herramientas
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.EndPoint">
+            <summary>
+            Punto final de las herramientas
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.TitleProperty">
+            <summary>
+            Propiedad de dependencia de el titulo del grafico
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.XLabelProperty">
+            <summary>
+            Propiedad de dependencia de la etiqueta del eje x
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.IsXGridEnabledProperty">
+            <summary>
+            Propiedad de dependencia de la habilitación del grid del eje x 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.IsYGridEnabledProperty">
+            <summary>
+            Propiedad de dependencia de la habilitación del grid del eje y
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.YLabelProperty">
+            <summary>
+            Propiedad de dependencia de la etiqueta del eje y
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.NameListProperty">
+            <summary>
+            Propiedad de dependencia de lista de nombres de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.ColorListProperty">
+            <summary>
+            Propiedad de dependencia de la lista de colores de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.IsLegendEnabledProperty">
+            <summary>
+            Propiedad de dependencia del booleano que determina si la leyenda se muestra
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ChartView.LegendPositionProperty">
+            <summary>
+            Propiedad de dependencia de la posición de la leyenda
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.#ctor">
+            <summary>
+            Constructor de la clase base de los graficos
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.Default">
+            <summary>
+            Esboza un gráfico sin datos 
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ChartGridSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            Evento del grid que se activa cuando se modifican sus dimensiones
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.OnMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.OnMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Evento del movimiento del mouse
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.OnMouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo arriba
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.OnMouseRightButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click derecho abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ControlLeftMargin_OnUpClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button superior del UpDownNumericInput que controla el valor del margen izquierdo del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ChartView_OnMouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del doble click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ControlLeftMargin_OnDownClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button inferior del UpDownNumericInput que controla el valor del margen izquierdo del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ControlRightMargin_OnDownClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button superior del UpDownNumericInput que controla el valor del margen derecho del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.ControlRightMargin_OnUpClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button inferior del UpDownNumericInput que controla el valor del margen derecho del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.OnMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Evento de la rueda del mouse 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se ejecuta al modificarse una propiedad de dependencia
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ChartView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.Chart">
+            <summary>
+            Gráfico base
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.Title">
+            <summary>
+            Titulo del grafico
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.XLabel">
+            <summary>
+            Etiqueta del eje x
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.IsXGridEnabled">
+            <summary>
+            Indica si se habilita el grid  del eje x del gráfico 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.IsYGridEnabled">
+            <summary>
+            Indica si se habilita el grid del eje y del gráfico 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.YLabel">
+            <summary>
+            Etiqueta del eje y
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.NameList">
+            <summary>
+            Lista de nombres de las variables
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.ColorList">
+            <summary>
+            Lista de colores de las variables
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.IsLegendEnabled">
+            <summary>
+            Booleano que determina si la leyenda se muestra
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ChartView.LegendPosition">
+            <summary>
+            Posición de la leyenda
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.#ctor">
+            <summary>
+            Constructor de la clase del gráfico dinámico
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.LineThicknessProperty">
+            <summary>
+            Propiedad de dependencia de la lista de anchos de línea de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.LinePatternProperty">
+            <summary>
+            Propiedad de dependencia de la lista de tipos de líneas de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.SymbolsProperty">
+            <summary>
+            Propiedad de dependencia de la lista de símbolos de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.TimeRangeProperty">
+            <summary>
+            Propiedad de dependencia de rango de tiempo
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.LineThickness">
+            <summary>
+            Lista de anchos de línea de las variables
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.LinePattern">
+            <summary>
+            Lista de tipos de líneas de las variables
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.Symbols">
+            <summary>
+            Lista de símbolos de las variables
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.DynamicChartControl.TimeRange">
+            <summary>
+            Rango de tiempo
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.YValuesProperty">
+            <summary>
+            Propiedad de dependencia de la lista de valores correspondientes al eje y
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.TimeProperty">
+            <summary>
+            Propiedad de dependencia de la fecha
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.#ctor">
+            <summary>
+            Constructor de la clase del gráfico en tiempo real
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.ModifyTime(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar la propiedad de Time
+            </summary>
+            <param name="d"></param>
+            <param name="baseValue"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.LoadTime">
+            <summary>
+            Carga la variable tiempo en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.Default">
+            <summary>
+            Esboza un gráfico sin datos 
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.ChartGridSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            Evento del grid que se activa cuando se modifican sus dimensiones
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.YValues">
+            <summary>
+            Lista de valores correspondientes al eje y
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.RealTimeChartControls.RealTimeChartControl.Time">
+            <summary>
+            Fecha
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.StaticChartControl">
+            <summary>
+            Gráfico estático
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GToolsProperty">
+            <summary>
+            Propiedad de dependencia del tipo de herramienta gráfica
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.XValuesProperty">
+            <summary>
+            Propiedad de dependencia de las lista de valores de las x
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.YValuesProperty">
+            <summary>
+            Propiedad de dependencia de las lista de valores de las y
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingProperty">
+            <summary>
+             Propiedad de dependencia del tipo de relleno para los datos faltantes
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.XDataTimesProperty">
+            <summary>
+            Propiedad de dependencia de las lista de variables en formato de fechas
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.InfoYValues">
+            <summary>
+            Contiene la informacion sobre la dimension de los datos de YValues
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.UpdateInfoYValues">
+            <summary>
+            Actualiza la informacion de InfoYValues
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.IsYValuesChanged">
+            <summary>
+            Verifica si cambio la dimension de la matriz de datos de y
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.#ctor">
+            <summary>
+            Constructor de la clase de graficos estaticos, o sea , que no son en el tiempo
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se ejecuta al modificarse una propiedad de dependencia
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GTools">
+            <summary>
+            Tipo de herramienta gráfica
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.XValues">
+            <summary>
+            Lista de variables, cuyos valores pertencen al eje x 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.YValues">
+            <summary>
+            Lista de variables, cuyos valores pertenecen al eje y 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFilling">
+            <summary>
+            Tipo de relleno para los valores faltantes
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.XDataTimes">
+            <summary>
+            Lista de variables en formato de fechas, cuyos valores pertenecen al eje x 
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GraphicsTools">
+            <summary>
+            Herramientas gráficas
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GraphicsTools.Panning">
+            <summary>
+            Mover gráfico
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GraphicsTools.Zooming">
+            <summary>
+            Acercar gráfico
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GraphicsTools.Retrieving">
+            <summary>
+            Coordenadas de las variables 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GraphicsTools.Selecting">
+            <summary>
+            Seleccionado de intervalos
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.GraphicsTools.Modifying">
+            <summary>
+            Modificar intervalos
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum">
+            <summary>
+            Tipo de tratamiento a los datos faltantes
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum.Null">
+            <summary>
+            Se emplea el espacio para destacar en el gráfico donde faltan los valores.
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum.Median">
+            <summary>
+            Se emplea la media para ocupar el lugar de los valores faltantes 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum.NaN">
+            <summary>
+            Se emplea NaN para ocupar los valores faltantes y se visualiza como un espacio en el gráfico
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.StaticChartControl.TypeFillingEnum.DefaultValue">
+            <summary>
+            No se realiza ningun tratamiento al set de valores
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.PieChartControls.PieChartViewControl">
+            <summary>
+            Interaction logic for PieChartViewControl.xaml
+            </summary>
+            <summary>
+            PieChartViewControl
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartViewControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartViewControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartViewControl.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.BalancedPieChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.BalancedPieChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.BalancedPieChartControl.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.PieChartControls.PieChartControl.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl">
+            <summary>
+            Interaction logic for SimpleChartControl.xaml
+            </summary>
+            <summary>
+            SimpleChartControl
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.ValuesProperty">
+            <summary>
+            Propiedad de dependencia de los valores de las y
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.IsGridEnabledProperty">
+            <summary>
+            Propiedad de dependencia de la habilitación del grid
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.TitleProperty">
+            <summary>
+            Propiedad de dependencia del título del gráfico simple
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.#ctor">
+            <summary>
+            Constructor base de los graficos simples
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.ChartGridSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.Default">
+            <summary>
+            Esboza un gráfico sin datos 
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.Plot">
+            <summary>
+            Grafica
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.Chart">
+            <summary>
+            Grafico base
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.Values">
+            <summary>
+            Valores de las y 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.IsGridEnabled">
+            <summary>
+            Booleano que indica si está habilitado el grid o no
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChartControl.Title">
+            <summary>
+            Título del gráfico simple
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl">
+            <summary>
+            Control base de los gráficos simples en 2D
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.#ctor">
+            <summary>
+            Constructor de la clase base de los gráficos simples en 2D
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.ShowAllDataProperty">
+            <summary>
+            Propiedad de dependencia del ShowAllData
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.DataToShowProperty">
+            <summary>
+            Propiedad de dependencia cantidad de valores a mostrar 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.ColorProperty">
+            <summary>
+            Propiedad de dependencia del color de la variable
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.ShowAllData">
+            <summary>
+            Booleano que representa si se desea mostrar todos los valores o no
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.DataToShow">
+            <summary>
+            Cantidad de valores a mostrar 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.SimpleChartControls.SimpleChart2DControl.Color">
+            <summary>
+            Color de la variable 
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl">
+            <summary>
+            Clase base de los gráficos 3D
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.ZValuesProperty">
+            <summary>
+            Propiedad de dependencia de las lista de valores de las z
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.IsZGridEnabledProperty">
+            <summary>
+            Propiedad de dependencia de la habilitación del grid del eje z
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.ZLabelProperty">
+            <summary>
+            Propiedad de dependencia de la etiqueta del eje z
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.#ctor">
+            <summary>
+            Constructor de la clase base de los gráficos 3D
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.OnMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.OnMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Evento del movimiento del mouse
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.OnMouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo arriba
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.OnMouseRightButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click derecho abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.ZValues">
+            <summary>
+            Lista de variables, cuyos valores pertenecen al eje z 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.IsZGridEnabled">
+            <summary>
+            Indica si se habilita el grid del eje z del gráfico 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.ZLabel">
+            <summary>
+            Etiqueta del eje z
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.TempZ0">
+            <summary>
+            Valor inicial temporal del eje z
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.ThreeDimensions.Chart3DControl.TempZ1">
+            <summary>
+            Valor final temporal del eje z
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.BarChartControl">
+            <summary>
+            Control para esbozar gráficos de barras
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl">
+            <summary>
+            Control base de los graficos 2D
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.RubberBand">
+            <summary>
+            Rectángulo del zooming 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.Circles_1">
+            <summary>
+            Lista de elipses pertenecientes a la coordenada del punto inicial
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.Circles_2">
+            <summary>
+            Lista de elipses pertenecientes a la coordenada del punto final
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ListCoordenadasIniciales">
+            <summary>
+            Lista de coordenadas pertenecientes a la coordenada del punto inicial
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ListCoordenadasFinales">
+            <summary>
+            Lista de coordenadas pertenecientes a la coordenada del punto final
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ShowAllDataProperty">
+            <summary>
+            Propiedad de dependencia de la lista de booleanos que determinan si se reducen los valores mostrados de cada variable
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.DataToShowProperty">
+            <summary>
+            Propiedad de dependencia de la lista de valores que representa la cantidad de valores a mostrar
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.IsAutomaticXTickEnabledProperty">
+            <summary>
+            Propiedad de dependencia del booleano que habilita los ticks automaticos del eje 
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.Default">
+            <summary>
+            Esboza un gráfico sin datos 
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.InitializeRetrieving">
+            <summary>
+            Inicializa los elementos de la herramienta de mostrar coordenadas
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ShowCoordinatesRetrieving">
+            <summary>
+            Muestra las coordenadas 
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.GetSelectedValues(System.Collections.Generic.List{System.Windows.Shapes.Polyline})">
+            <summary>
+            Obtiene los intervalos definidos a partir de los puntos seleccionados.
+            </summary>
+            <returns>
+            Una colección con los intervalos que contienen los puntos seleccionados.
+            </returns>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.OnMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.OnMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Evento del movimiento del mouse
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.OnMouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo arriba
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ShowCoordinates">
+            <summary>
+            Muestra el menú de modificar coordenadas
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.HideCoordinates">
+            <summary>
+            Oculta el menú de modificar coordenadas
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ClickRight">
+            <summary>
+            Indica si se dio click derecho
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.OnMouseRightButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click derecho abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.OnMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Evento de la rueda del mouse 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.ShowAllData">
+            <summary>
+            Lista de booleanos que determinan si se reducen los valores mostrados de cada variable o no
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.DataToShow">
+            <summary>
+            Lista de valores que representa la cantidad de valores a mostrar
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.IsAutomaticXTickEnabled">
+            <summary>
+            Determina si los ticks del eje x se muestran de forma automática o no 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.TempX0">
+            <summary>
+            Posición temporal del mouse con respecto a la posición inicial de este en el eje de las x
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.TempY0">
+            <summary>
+            Posición temporal del mouse con respecto a la posición inicial de este en el eje de las y
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.TempX1">
+            <summary>
+            Posición temporal del mouse con respecto a la posición final de este en el eje de las x
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Chart2DControl.TempY1">
+            <summary>
+            Posición temporal del mouse con respecto a la posición final de este en el eje de las y
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControl">
+            <summary>
+            Control para esbozar gráficos de línea en 2D
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl">
+            <summary>
+            Control para esbozar gráficos de paso escalón
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Scatter2DChartControl">
+            <summary>
+            Grafico de puntos 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Scatter2DChartControl.SymbolsProperty">
+            <summary>
+            Propiedad de dependencia de la lista de símbolos de las variables
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Scatter2DChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Scatter2DChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Scatter2DChartControl.Symbols">
+            <summary>
+            Lista de símbolos de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl.LineThicknessProperty">
+            <summary>
+            Propiedad de dependencia de la lista de anchos de línea de las variables
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl.LinePatternProperty">
+            <summary>
+            Propiedad de dependencia de la lista de tipos de líneas de las variables
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl.LineThickness">
+            <summary>
+            Lista de anchos de línea de las variables
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StairstepChartControl.LinePattern">
+            <summary>
+            Lista de tipos de líneas de las variables
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended">
+            <summary>
+            Control para esbozar gráficos de línea en 2D con herramientas para manipular intervalos
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.SelectedIntervalsProperty">
+            <summary>
+            Propiedad de dependencia de los intervalos seleccionados
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.AllIntervalsProperty">
+            <summary>
+            Propiedad de dependencia de todos los intervalos verticales
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.HighlightedIntervalsProperty">
+            <summary>
+            Propiedad de dependencia de los intervalos verticales perteneciantes a un estado de operacion
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.SelectedHighlightedIntervalProperty">
+            <summary>
+            Propiedad de dependencia del interval vertical seleccionado de un estado de operacion
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalsOrientationProperty">
+            <summary>
+             Propiedad de dependencia de la posicion de intervalos
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IsLinkedIntervalProperty">
+            <summary>
+            Propiedad de dependencia de los intervalos enlazados
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.TextMinProperty">
+            <summary>
+            Propiedad de dependencia del texto de menor valor de la herramienta de modificar intervalos
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.TextMaxProperty">
+            <summary>
+            Propiedad de dependencia del texto de mayor valor de la herramienta de modificar intervalos
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ChangeIntervalOrientation(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Grafica de nuevo si se modifica la orientacion de los intervalos
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="baseValue"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.OnMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.OnMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Evento del movimiento del mouse
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.OnMouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click izquierdo arriba
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.OnMouseRightButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del click derecho abajo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ShowCoordinatesSelecting">
+            <summary>
+            Muestra las coordenadas de los márgenes al seleccionar intervalo
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ControlLeftMargin_OnDownClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button inferior del UpDownNumericInput que controla el valor del margen izquierdo del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ControlLeftMargin_OnUpClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button superior del UpDownNumericInput que controla el valor del margen izquierdo del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ControlRightMargin_OnUpClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button inferior del UpDownNumericInput que controla el valor del margen derecho del intervalo 
+            </summary>
+            <param name="sender"></param> 
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ControlRightMargin_OnDownClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Evento del button superior del UpDownNumericInput que controla el valor del margen derecho del intervalo 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se ejecuta al modificarse una propiedad de dependencia
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ChartView_OnMouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Evento del doble click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ControlLimits(DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+             Calcula los limites de cada control
+            </summary>
+            <param name="interval">Intervalo seleccionado</param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IsIntervalContinuous">
+            <summary>
+            Comprueba que los intervalos sean continuos
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ChangeRightMarginIntervals(DataAnalysis.Basic.Interval{System.Double},DataAnalysis.Basic.Interval{System.Double},DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Modifica el margen derecho en los intervalos de allintervals y highlightedintervals del intervalo seleccionado
+            </summary>
+            <param name="interval">intervalo posterior a modificar</param>
+            <param name="selected">intervalo seleccionado modificado</param>
+            <param name="oldselected">intervalo seleccionado anterior </param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.ChangeLeftMarginIntervals(DataAnalysis.Basic.Interval{System.Double},DataAnalysis.Basic.Interval{System.Double},DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+             Modifica el margen izquierdo en los intervalos de allintervals y highlightedintervals del intervalo seleccionado
+            </summary>
+            <param name="interval">intervalo previo a modificar</param>
+            <param name="selected">intervalo seleccionado modificado</param>
+            <param name="oldselected">intervalo seleccionado anterior </param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.UploadAllIntervalPrevious(DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Devuelve el intervalo vertical anterior o nulo si no existe
+            </summary>
+            <param name="interval"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.UploadAllIntervalPosterior(DataAnalysis.Basic.Interval{System.Double})">
+            <summary>
+            Devuelve el intervalo vertical siguiente o nulo si no existe
+            </summary>
+            <param name="interval"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalFocus(Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.Position)">
+            <summary>
+            Calcula los nuevos limites del grafico para el caso de q no este enfocado el intervalo seleccionado 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.Variations">
+            <summary>
+            Variacion de los intervalos horizontales
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.Chart">
+            <summary>
+            Grafico de linea en 2D
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.SelectedIntervals">
+            <summary>
+            Contiene los intervalos seleccionados mediante la herramienta seleccionar
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.AllIntervals">
+            <summary>
+            Contiene todos los intervalos verticales correspondientes a los estados de operacion existentes
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.HighlightedIntervals">
+            <summary>
+            Contiene los intervalos verticales de un estado de operación
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.SelectedHighlightedInterval">
+            <summary>
+            Representa el intervalo vertical seleccionado de un estado de operación
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalsOrientation">
+            <summary>
+            Tipo posicion de los intervalos
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IsLinkedInterval">
+            <summary>
+            Booleano que representa si los intervalos estan enlazados o no 
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.TextMin">
+            <summary>
+            Texto de menor valor de la herramienta de modificar intervalos
+            </summary>
+        </member>
+        <member name="P:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.TextMax">
+            <summary>
+            Texto de mayor valor de la herramienta de modificar intervalos
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum">
+            <summary>
+            Enumerado de los diferentes tipos de intervalos 
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum.Horizontal">
+            <summary>
+            Intervalo horizontal
+            </summary>
+        </member>
+        <member name="F:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.Line2DChartControlExtended.IntervalPositionTypeEnum.Vertical">
+            <summary>
+            Intervalo vertical
+            </summary>
+        </member>
+        <member name="T:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StemChartControl">
+            <summary>
+            Control para esbozar gráficos de tallo
+            </summary>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StemChartControl.ModifyProperties(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Evento que se activa al cambiar una propiedad
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Visualization.WpfGraphicControls.ChartControls.TwoDimensions.StemChartControl.LoadData">
+            <summary>
+            Carga las variables en la aplicación
+            </summary>
+        </member>
+    </members>
+</doc>

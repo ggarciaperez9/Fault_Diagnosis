@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="CWFlow" Label="CWFlow" Size="10" />
+    <Node Id="Entalpy" Label="Entalpy" Size="10" />
+    <Node Id="OutFlow" Label="OutFlow" Size="10" />
+    <Node Id="Steam" Label="Steam" Size="10" />
+    <Node Id="Volume" Label="Volume" Size="10" />
+  </Nodes>
+  <Links>
+    <Link Source="CWFlow" Target="OutFlow" Label="0,024" />
+    <Link Source="CWFlow" Target="Volume" Label="0,016" />
+    <Link Source="Entalpy" Target="CWFlow" Label="0,995" />
+    <Link Source="Entalpy" Target="OutFlow" Label="1" />
+    <Link Source="Entalpy" Target="Steam" Label="0,976" />
+    <Link Source="Entalpy" Target="Volume" Label="0,998" />
+    <Link Source="Steam" Target="CWFlow" Label="0,059" />
+    <Link Source="Steam" Target="OutFlow" Label="0,052" />
+    <Link Source="Steam" Target="Volume" Label="0,014" />
+    <Link Source="Volume" Target="OutFlow" Label="0,008" />
+  </Links>
+  <Properties>
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Size" DataType="System.String" />
+  </Properties>
+</DirectedGraph>

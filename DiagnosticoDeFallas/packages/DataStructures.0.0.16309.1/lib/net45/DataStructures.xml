@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataStructures</name>
+    </assembly>
+    <members>
+        <member name="M:DataStructures.Tree.ITree.Size">
+            <summary>
+            Obtiene la cantidad de nodos del árbol.
+            </summary>
+            <returns>
+            Cantidad de nodos.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.Empty">
+            <summary>
+            Comprueba si el árbol está vacío.
+            </summary>
+            <returns>
+            Devuelve true si el árbol está vacío y false de lo contrario.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.Root">
+            <summary>
+            Obtiene la raíz del árbol.
+            </summary>
+            <returns>
+            Devuelve la raíz del arbol. 
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.AddRoot">
+            <summary>
+            Adiciona raíz a un árbol vacío.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.AddRoot(DataStructures.Tree.INode)">
+            <summary>
+            Adiciona un nodo existente como raíz a un árbol.
+            </summary>
+            <param name="n">
+            Nodo.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.ExpandExternal(DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a transformar.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.Clear(DataStructures.Tree.INode)">
+            <summary>
+            Elimina el árbol a partir de un nodo.
+            </summary>
+            <param name="n">
+            Raíz del subárbol a eliminar.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.ITree.AppendTree(DataStructures.Tree.INode,DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en el nodo raíz de un subárbol.
+            </summary>
+            <param name="t">
+            Nodo raíz del subárbol.
+            </param>
+            <param name="n">
+            Nodo a expandir.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.Size">
+            <summary>
+            Obtiene la cantidad de nodos del árbol.
+            </summary>
+            <returns>
+            Cantidad de nodos.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.Empty">
+            <summary>
+            Comprueba si el árbol está vacío.
+            </summary>
+            <returns>
+            Devuelve true si el árbol está vacío y false de lo contrario.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.Root">
+            <summary>
+            Obtiene la raíz del árbol.
+            </summary>
+            <returns>
+            Devuelve la raíz del arbol. 
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.AddRoot">
+            <summary>
+            Adiciona raíz a un árbol vacío.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.AddRoot(DataStructures.Tree.INode)">
+            <summary>
+            Adiciona un nodo existente como raíz a un árbol.
+            </summary>
+            <param name="n">
+            Nodo.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.AddRoot(`0)">
+            <summary>
+            Adiciona raíz a un árbol mediante un elemento.
+            </summary>
+            <param name="ikey">
+            Elemento.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.ExpandExternal(DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a transformar.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.Clear(DataStructures.Tree.INode)">
+            <summary>
+            Elimina el árbol a partir de un nodo.
+            </summary>
+            <param name="n">
+            Raíz del subárbol a eliminar.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.AppendTree(DataStructures.Tree.INode,DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en el nodo raíz de un subárbol.
+            </summary>
+            <param name="t">
+            Nodo raíz del subárbol.
+            </param>
+            <param name="n">
+            Nodo a expandir.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.RemoveExternal(DataStructures.Tree.BasicTree{`0}.BasicNode)">
+            <summary>
+            Elimina un nodo externo.
+            </summary>
+            <param name="n">
+            Nodo a eliminar.
+            </param>
+        </member>
+        <member name="P:DataStructures.Tree.BasicTree`1.NodeCount">
+            <summary>
+            Devuelve el número de nodos
+            </summary>
+        </member>
+        <member name="T:DataStructures.Tree.BasicTree`1.BasicNode">
+            <summary>
+            Modela el nodo del árbol.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.INode.IsRoot">
+            <summary>
+            Comprueba si el nodo es la raíz del árbol.
+            </summary>
+            <returns>
+            Devuelve true is el nodo es la raíz y false de lo contrario.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.INode.IsExternal">
+            <summary>
+            Comprueba si el nodo corresponde a un nodo externo.
+            </summary>
+            <returns>
+            Devuelve true si el nodo es externo y false de lo contrario.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.BasicNode.#ctor">
+            <summary>
+            Construye un nodo.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.BasicNode.IsRoot">
+            <summary>
+            Comprueba si el nodo es la raíz del árbol.
+            </summary>
+            <returns>
+            Devuelve true is el nodo es la raíz y false de lo contrario.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.BasicTree`1.BasicNode.IsExternal">
+            <summary>
+            Comprueba si el nodo corresponde a un nodo externo.
+            </summary>
+            <returns>
+            Devuelve true si el nodo es externo y false de lo contrario.
+            </returns>
+        </member>
+        <member name="P:DataStructures.Tree.BasicTree`1.BasicNode.Parent">
+            <summary>
+            Recibe o devuelve al nodo padre.
+            </summary>
+        </member>
+        <member name="T:DataStructures.Tree.BinaryTree`1">
+            <summary>
+            Modela un árbol binario
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.AddRoot">
+            <summary>
+            Adiciona raíz a un árbol vacío.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.AddRoot(DataStructures.Tree.INode)">
+            <summary>
+            Adiciona un nodo existente como raíz a un árbol.
+            </summary>
+            <param name="n">
+            Nodo.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.AddRoot(`0)">
+            <summary>
+            Adiciona raíz a un árbol mediante un elemento.
+            </summary>
+            <param name="ikey">
+            Elemento.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.ExpandExternal(DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en un nodo interno creando dos nuevos 
+            nodos externos, y los hace sus hijos izquierdo y derecho respectivamente; 
+            una condición de error ocurre si el nodo es un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a transformar.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.RemoveAboveExternal(DataStructures.Tree.BinaryTree{`0}.BinaryNode)">
+            <summary>
+            Elimina un nodo externo junto con su nodo padre, reemplazando al 
+            nodo padre por el nodo hermano; una condición de error ocurre si 
+            el nodo es un nodo interno o es el nodo raíz.
+            </summary>
+            <param name="n">
+            Nodo a eliminar.
+            </param>
+            <returns>
+            Devuelve el nodo hermano.
+            </returns>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.RemoveExternal(DataStructures.Tree.BasicTree{`0}.BasicNode)">
+            <summary>
+            Elimina un nodo externo; una condición de error ocurre si el nodo
+            es un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a eliminar.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.Clear(DataStructures.Tree.INode)">
+            <summary>
+            Elimina el árbol a partir de un nodo.
+            </summary>
+            <param name="n">
+            Raíz del subárbol a eliminar.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.AppendTree(DataStructures.Tree.INode,DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en el nodo raíz de un subárbol; una condición 
+            de error ocurre si el nodo es un nodo interno.
+            </summary>
+            <param name="t">
+            Nodo raíz del subárbol.
+            </param>
+            <param name="n">
+            Nodo a expandir.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="T:DataStructures.Tree.BinaryTree`1.BinaryNode">
+            <summary>
+            Modela el nodo del árbol.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.BinaryNode.#ctor">
+            <summary>
+            Construye un nodo.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.BinaryTree`1.BinaryNode.IsExternal">
+            <summary>
+            Comprueba si el nodo corresponde a un nodo externo.
+            </summary>
+            <returns>
+            Devuelve true si el nodo es externo y false de lo contrario.
+            </returns>
+        </member>
+        <member name="P:DataStructures.Tree.BinaryTree`1.BinaryNode.Left">
+            <summary>
+            Recibe o devuelve el hijo izquierdo del nodo binario.
+            </summary>
+        </member>
+        <member name="P:DataStructures.Tree.BinaryTree`1.BinaryNode.Right">
+            <summary>
+            Recibe o devuelve el hijo derecho del nodo binario.
+            </summary>
+        </member>
+        <member name="T:DataStructures.Tree.ExpressionTree">
+            <summary>
+            Modela una expresión aritmética.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.ExpressionTree.ExpandAsBinaryOperator(DataStructures.Tree.BinaryTree{System.Object}.BinaryNode,System.String)">
+            <summary>
+            Transforma un nodo externo en un nodo interno creando dos nuevos 
+            nodos externos, y los hace sus hijos izquierdo y derecho respectivamente; 
+            una condición de error ocurre si el nodo es un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a transformar.
+            </param>
+            <param name="op">
+            Operador asignado al nodo interno.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.ExpressionTree.ExpandAsUnaryOperator(DataStructures.Tree.BinaryTree{System.Object}.BinaryNode,System.String)">
+            <summary>
+            Transforma un nodo externo en un nodo interno creando un nuevo 
+            nodo externo, y lo hace su hijo izquierdo; una condición de error ocurre 
+            si el nodo es un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a transformar.
+            </param>
+            <param name="op">
+            Operador asignado al nodo interno.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.ExpressionTree.EvaluateExpression(DataStructures.Tree.BinaryTree{System.Object}.BinaryNode)">
+            <summary>
+            Evalua la expresión aritmética.
+            </summary>
+            <param name="n">
+            Nodo raíz del subárbol a evaluar.
+            </param>
+            <returns>
+            Resultado de la expresión aritmética.
+            </returns>
+            <exception cref="T:System.InvalidOperationException"/>
+            <exception cref="T:System.MissingFieldException"/>
+        </member>
+        <member name="M:DataStructures.Tree.ExpressionTree.EvaluateExpression(DataStructures.Tree.BinaryTree{System.Object}.BinaryNode,System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            Evalua la expresión aritmética con valores de los nodos externos no definidos.
+            </summary>
+            <param name="n">
+            Nodo raíz del subárbol a evaluar.
+            </param>
+            <param name="valuesDictionary">
+            Diccionario conteniendo los valores de los nodos externos y el identificador 
+            del valor.
+            </param>
+            <returns>
+            Resultado de la expresión aritmética.
+            </returns>
+            <exception cref="T:System.InvalidOperationException"/>
+            <exception cref="T:System.MissingFieldException"/>
+        </member>
+        <member name="M:DataStructures.Tree.ExpressionTree.GetNonConstantExternals(DataStructures.Tree.BinaryTree{System.Object}.BinaryNode)">
+            <summary>
+            Obtiene los nodos externos con valores no constantes.
+            </summary>
+            <param name="n">
+            Nodo raíz del subárbol a analizar.
+            </param>
+            <returns>
+            Lista de nodos externos con valores no constantes.
+            </returns>
+            <exception cref="T:System.MissingFieldException"/>
+        </member>
+        <member name="M:DataStructures.Tree.ExpressionTree.PMMLParse(System.Xml.Linq.XElement,DataStructures.Tree.BinaryTree{System.Object}.BinaryNode)">
+            <summary>
+            Construye una expresión aritmética a partir de una representación 
+            PMML de una función.
+            </summary>
+            <param name="element">
+            Representación PMML de la expresión aritmética.
+            </param>
+            <param name="n">
+            Nodo raíz del subárbol a construir.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.AddRoot">
+            <summary>
+            Adiciona la raíz a un árbol vacío.
+            Si el árbol contiene elementos, estos son eliminados.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.AddRoot(DataStructures.Tree.INode)">
+            <summary>
+            Adiciona un nodo existente como raíz a un árbol.
+            </summary>
+            <param name="n">
+            Nodo.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.AddRoot(`0)">
+            <summary>
+            Adiciona raíz a un árbol mediante un elemento.
+            </summary>
+            <param name="ikey">
+            Elemento.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.ExpandExternal(DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en un nodo interno; 
+            una condición de error ocurre si el nodo es un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a transformar.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.RemoveExternal(DataStructures.Tree.BasicTree{`0}.BasicNode)">
+            <summary>
+            Elimina un nodo externo; una condición de error ocurre si el nodo
+            es un nodo interno.
+            </summary>
+            <param name="n">
+            Nodo a eliminar.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.Clear(DataStructures.Tree.INode)">
+            <summary>
+            Elimina el árbol a partir de un nodo.
+            </summary>
+            <param name="n">
+            Raíz del subárbol a eliminar.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.AppendTree(DataStructures.Tree.INode,DataStructures.Tree.INode)">
+            <summary>
+            Transforma un nodo externo en el nodo raíz de un subárbol; una condición 
+            de error ocurre si el nodo es un nodo interno.
+            </summary>
+            <param name="t">
+            Nodo raíz del subárbol.
+            </param>
+            <param name="n">
+            Nodo a expandir.
+            </param>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="T:DataStructures.Tree.Tree`1.Node">
+            <summary>
+            Modela el nodo del árbol.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.Node.#ctor">
+            <summary>
+            Construye un nodo.
+            </summary>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.Node.#ctor(`0)">
+            <summary>
+            Construye un nodo con un elemento.
+            </summary>
+            <param name="element">
+            Elemento.
+            </param>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.Node.IsExternal">
+            <summary>
+            Comprueba si el nodo corresponde a un nodo externo.
+            </summary>
+            <returns>
+            Devuelve true si el nodo es externo y false de lo contrario.
+            </returns>
+        </member>
+        <member name="M:DataStructures.Tree.Tree`1.Node.AddChild(`0)">
+            <summary>
+            Agrega un descendiente del nodo.
+            </summary>
+            <param name="element">
+            Elemento del nodo descendiente.
+            </param>
+        </member>
+        <member name="P:DataStructures.Tree.Tree`1.Node.Parent">
+            <summary>
+            Recibe o devuelve al nodo padre.
+            </summary>
+        </member>
+        <member name="P:DataStructures.Tree.Tree`1.Node.Children">
+            <summary>
+            Recibe o devuelve la descendencia del nodo.
+            </summary>
+        </member>
+    </members>
+</doc>

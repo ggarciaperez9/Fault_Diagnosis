@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Bytescout.SpreadsheetControl</name>
+  </assembly>
+  <members>
+    <member name="T:Bytescout.Spreadsheet.SpreadsheetControl">
+      <summary>
+            Spreadsheet visualization control.
+            </summary>
+    </member>
+    <member name="M:Bytescout.Spreadsheet.SpreadsheetControl.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:Bytescout.Spreadsheet.SpreadsheetControl" /> class.
+            </summary>
+    </member>
+    <member name="M:Bytescout.Spreadsheet.SpreadsheetControl.Dispose(System.Boolean)">
+      <summary>
+            Releases the unmanaged resources used by the control and its child controls and optionally releases the managed resources.
+            </summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="E:Bytescout.Spreadsheet.SpreadsheetControl.SpreadsheetChanged">
+      <summary>
+            Occurs when Spreadsheet property changed.
+            </summary>
+    </member>
+    <member name="E:Bytescout.Spreadsheet.SpreadsheetControl.SelectedWorksheetIndexChanged">
+      <summary>
+            Occurs when selected worksheet index changed.
+            </summary>
+    </member>
+    <member name="P:Bytescout.Spreadsheet.SpreadsheetControl.Spreadsheet">
+      <summary>
+            Gets or sets the Spreadsheet object to visualize.
+            </summary>
+      <value>The spreadsheet.</value>
+    </member>
+    <member name="P:Bytescout.Spreadsheet.SpreadsheetControl.SelectedWorksheetIndex">
+      <summary>
+            Gets or sets the index of the selected worksheet.
+            </summary>
+      <value>The index of the selected worksheet.</value>
+    </member>
+  </members>
+</doc>

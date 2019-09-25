@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="CWFlow" Label="CWFlow" Size="10" />
+    <Node Id="Level" Label="Level" Size="10" />
+    <Node Id="OutFlow" Label="OutFlow" Size="10" />
+    <Node Id="Steam" Label="Steam" Size="10" />
+    <Node Id="TempOF" Label="TempOF" Size="10" />
+    <Node Id="Volume" Label="Volume" Size="10" />
+  </Nodes>
+  <Links>
+    <Link Source="CWFlow" Target="OutFlow" Label="0,004" />
+    <Link Source="CWFlow" Target="TempOF" Label="0,004" />
+    <Link Source="CWFlow" Target="Volume" Label="0,003" />
+    <Link Source="Steam" Target="TempOF" Label="0,002" />
+    <Link Source="Steam" Target="Volume" Label="0,001" />
+  </Links>
+  <Properties>
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Size" DataType="System.String" />
+  </Properties>
+</DirectedGraph>
