@@ -27,4 +27,4 @@ Run the "DiagnosticoDeFallas.sln" file.
 
 ## Authors
 
-* **Gabriel Pérez García** - *Initial work* - [ggarciaperez9](https://github.com/ggarciaperez9)
+* **Gabriel Pérez García** - [ggarciaperez9](https://github.com/ggarciaperez9)
